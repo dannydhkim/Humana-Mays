@@ -4,3 +4,5 @@ During the past few years, there has been a dramatic increase in prescription op
 This code aims to do just that: to identify memeber at risk or conitnued long-term use of opioid therapies to allow for early intervention. To do this, we use provided data containing information of 14k patients (pharmacy claims, surgeries, diagnosis, etc) to create a model to predict if a patient will continue opioid therapy six months after initital prescribing. 
 
 This code was developed as part of our application to the Humana Mays Healthcare competition (2019). For more information you can visit: https://www.humanatamuanalytics.com/
+
+## Data Overview
