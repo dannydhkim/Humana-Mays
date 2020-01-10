@@ -47,7 +47,7 @@ A literature research was conducted in order to fully explore the underlying ris
 3. Machine Learning
 4. Evaluate Prediction Performance
 
-## Data Pre-processing
+## Data Pre-processing (from here down it needs to be written again:)!)
 Thoughtful preprocessing of the data enhanced  the ability to interpret the relative importance of risks. It is noted that “as-prescribed” approach was used, which assumes that patients take all prescribed opioids at the prescribed dose and on the schedule recommended by their clinicians. Opioid events could only be applicable to those with both MME attributes and a “Day 0” event. Patients with missing data were screened out of the process. A sample size of n = 12355 was used to extract features to be used and analyzed. Pandas and Numpy were used to transform the data into a new, simpler dataset format which contain a boolean series of LTOT or not and the list of features.
 
 According to the definitions provided, we defined long-term opioid therapy events as having opioid ‘on hand’ for a total of 162 days or above in a 180-day window. Patients who had any LTOT qualifying 180-day window within their longitudinal record after Day 0 were considered to be LTOT. LTOT events were labelled to be used as a validation set for training the machine learning model. 
