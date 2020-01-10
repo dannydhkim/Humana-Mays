@@ -84,4 +84,6 @@ Algorithm Implementation: Implementing the class so that the algorithm is scalab
 
 Feature Engineering: Compiled list of methods used to extract selected features from the dataset. Methods are made scalable for the dataset to fit any patient.
 
+Data Analysis: We explored some data visualizations but found that it was not very useful for any particular insight.
+
 XGBoost: The machine learning code using XGBoost to implement gradient boost machine on the chosen feature data. The model is evaluated by generating a confusion matrix, accuracy, and AUC curve.
