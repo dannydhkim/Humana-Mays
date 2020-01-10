@@ -1,8 +1,8 @@
 # Using Machine Learning to Predict U.S. Opioid Long-Term Therapy Patients (Humana Mays Healthcare Competition 2019)
 
-<p align="center">
-<src=https://user-images.githubusercontent.com/54824400/72117856-0b424680-3304-11ea-8ec4-ecda15d87b61.png>
-</p>
+<p align = "center">
+<img src="https://user-images.githubusercontent.com/54824400/72117856-0b424680-3304-11ea-8ec4-ecda15d87b61.png"/>
+        </p>
 
 During the past few years, there has been a dramatic increase in prescription opioid use disorder (OUD), opioid-related morbidity and mortality. Moreover, according to Centers for Disease Control and Prevention research, one out of four patients who receive long-term opioid therapy in primary care settings struggle with opioid use disorder. A model that is able to extract the knowledge of clinical characteristics associated with the progression of long-term opioid therapy can aid in the identification of disorder at-risk patients to provide the basis for developing targeted clinical interventions. Identifying potential abusers and preventing the outcome is of course far more cost-efficient, both in terms of finance and on the person’s health, than attempting to intervene after abuse has been diagnosed.
 
