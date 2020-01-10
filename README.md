@@ -6,7 +6,7 @@ This code aims to do just that: to identify memeber at risk or conitnued long-te
 This code was developed as part of our application to the Humana Mays Healthcare competition (2019). For more information you can visit: https://www.humanatamuanalytics.com/
 
 ## Data Overview
-The dataset used in this study was obtained from a national health insurance. This dataset contained medical claims from 16,000 members during a period of time of four years (2015 through 2018). The following definitions were provided:
+The dataset used in this study was obtained from the national health insurance company, Humana. This dataset contained medical claims from 16,000 members during a period of time of four years (2015 through 2018). The following definitions were provided:
 
 Opioid Naïve: patient not having an opioid ‘on hand’ in the preceding 90-day period, based on service date and pay day supply count.
 Long Term Opioid Therapy (LTOT): continuous use of an opioid medication with 90% of days covered over a 6 month period.
