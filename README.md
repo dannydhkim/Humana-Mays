@@ -1,4 +1,6 @@
 # Using Machine Learning to Predict U.S. Opioid Long-Term Therapy Patients (Humana Mays Healthcare Competition 2019)
+
+![Title](https://user-images.githubusercontent.com/54824400/72117856-0b424680-3304-11ea-8ec4-ecda15d87b61.png)
 During the past few years, there has been a dramatic increase in prescription opioid use disorder (OUD), opioid-related morbidity and mortality. Moreover, according to Centers for Disease Control and Prevention research, one out of four patients who receive long-term opioid therapy in primary care settings struggle with opioid use disorder. A model that is able to extract the knowledge of clinical characteristics associated with the progression of long-term opioid therapy can aid in the identification of disorder at-risk patients to provide the basis for developing targeted clinical interventions. Identifying potential abusers and preventing the outcome is of course far more cost-efficient, both in terms of finance and on the person’s health, than attempting to intervene after abuse has been diagnosed.
 
 This code aims to do just that: to identify members at risk or continued long-term use of opioid therapies to allow for early intervention. To do this, we use provided data containing information of 14k patients (pharmacy claims, surgeries, diagnosis, etc) to create a model to predict if a patient will continue opioid therapy six months after initial prescribing. 
@@ -33,7 +35,7 @@ A description of the 20 columns (attributes)  in the dataset is provided below:
         RX Claim - Rejected
         RX Claim - New drug
         RX Claim - First time mail order
-- Attributes: for each type of events, 10 different attributes providing relevant information about the events are given. The only exception is for Rx Claims, where 5 extra attributes are added onto the 10 features, making a total of 15. The exhaustive list of attributes can be found in section 4 (Table for Attributed).
+- Attributes: for each type of events, 10 different attributes providing relevant information about the events are given. The only exception is for Rx Claims, where 5 extra attributes are added onto the 10 features, making a total of 15. 
 
 The following image exemplifies the data: 
 
@@ -61,13 +63,22 @@ Once patients were labeled as LTOT, we found that the calculated LTOT rate in ou
 
 A XGBoost framework was used with the following parameters: the data was split into a random 60-40 train and testing set. With 100 rounds of training with a tree model and a binary logistic model to output a probabilistic value.
 
-Figure 2 depicts the importance of the 14 features assessed in descending order of importance. The six major variables that most highly correlated with being at risk for LTOT: average daily MME, total MME, number of non-opioid prescriptions, number of opioid fills, new provider (doctors shopping) and number of benzodiazepine fills. A higher F-score implies a higher discriminative power, but does not indicate any mutual information (i.e. combination of features may lead to different results).  These results directly correlate with the research carried out by previous studies 
+![Feature Importance](https://user-images.githubusercontent.com/54824400/72118017-96234100-3304-11ea-8fc9-6863e8a0de0e.png)
+
+The figure above depicts the importance of the 14 features assessed in descending order of importance. The six major variables that most highly correlated with being at risk for LTOT: average daily MME, total MME, number of non-opioid prescriptions, number of opioid fills, new provider (doctors shopping) and number of benzodiazepine fills. A higher F-score implies a higher discriminative power, but does not indicate any mutual information (i.e. combination of features may lead to different results).  These results directly correlate with the research carried out by previous studies 
 
 ## Evaluate Prediction Performance
-To evaluate the performance of the model, we placed our results on a confusion matrix. The sensitivity and specificity in this instance of the application seen in Fig 3 is 86.76% and 78.94%, respectively. For our purposes, the model was able to achieve an 82% accuracy and a  based on the training data. Furthermore, we evaluated the performance of the model on a ROC-AUC curve and saw an AUC of 0.83 (Figure 4). 
+To evaluate the performance of the model, we placed our results on a confusion matrix. The sensitivity and specificity in this instance of the application seen in the confusion matrix below is 86.76% and 78.94%, respectively. For our purposes, the model was able to achieve an 82% accuracy and a  based on the training data. Furthermore, we evaluated the performance of the model on a ROC-AUC curve and saw an AUC of 0.83.. 
+
+![Confusion Matrix](https://user-images.githubusercontent.com/54824400/72118085-e7cbcb80-3304-11ea-8e53-8ba0c9d2624f.png)
+
+![AUC](https://user-images.githubusercontent.com/54824400/72118105-f9ad6e80-3304-11ea-95c4-01956a33eda0.png)
 
 ## Purpose of different notebooks
-Opioid Algorithm: Experiment the algorithm for aggregating post-qualifying-event MME for each patient, by implementing on one patient’s record
-Algorithm Implementation: Define the class and associated methods for qualitative risk/risk-free determination, based on MME amount for each patient
-All Features: Define the class and associated methods for feature engineering
-XGBoost: Prepare feature data generated for gradient boosting machine; implement gradient boosting machine on feature data using scikit-learn; generate confusion matrix, AUC curve and prediction on the holdout data
+Opioid Algorithm: Development of the algorithm to predict long-term opioid dependence on one patient.
+
+Algorithm Implementation: Implementing the class so that the algorithm is scalable for qualitative determination of patient risk based on MME amount for each patient.
+
+Feature Engineering: Compiled list of methods used to extract selected features from the dataset. Methods are made scalable for the dataset to fit any patient.
+
+XGBoost: The machine learning code using XGBoost to implement gradient boost machine on the chosen feature data. The model is evaluated by generating a confusion matrix, accuracy, and AUC curve.
