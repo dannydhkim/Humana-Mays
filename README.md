@@ -35,4 +35,24 @@ A description of the 20 columns (attributes)  in the dataset is provided below:
         RX Claim - First time mail order
 - Attributes: for each type of events, 10 different attributes providing relevant information about the events are given. The only exception is for Rx Claims, where 5 extra attributes are added onto the 10 features, making a total of 15. The exhaustive list of attributes can be found in section 4 (Table for Attributed).
 
-![alt text](http://url/to/img.png)
+The following image exemplifies the data: 
+
+![Screenshot 2020-01-09 at 16 02 48](https://user-images.githubusercontent.com/55929915/72115058-84d53700-32fa-11ea-95c0-d2c310796649.png)
+
+A literature research was conducted in order to fully explore the underlying risk factors in long-term opioid therapy. We examined our data and aligned the provided information with the results derived from the literature and we determined the possible features that could be extracted: total MME, average daily MME, number of opioid fills, number of benzodiazepine fills and history of alcohol and substance use disorder. It is noteworthy that other features such as “Disability Status” were considered but found to have an insignificant relevance in our data. Afterwards, we decided to test for additional features: number of non-opioid prescriptions, doctors shopping (looking for new providers), mental health disorders and top 5 diagnosis (diabetes, hypertension, CPD, CHF and CAD). Information such as surgery, physician specialty, place of treatment and costs were considered irrelevant for the purpose of the model.
+
+## Flow
+1. Data Pre-processing
+2. Feature Engineering
+3. Machine Learning
+4. Evaluate Prediction Performance
+
+## Data Pre-processing
+Thoughtful preprocessing of the data enhanced  the ability to interpret the relative importance of risks. It is noted that “as-prescribed” approach was used, which assumes that patients take all prescribed opioids at the prescribed dose and on the schedule recommended by their clinicians. Opioid events could only be applicable to those with both MME attributes and a “Day 0” event. Patients with missing data were screened out of the process. A sample size of n = 12355 was used to extract features to be used and analyzed. Pandas and Numpy were used to transform the data into a new, simpler dataset format which contain a boolean series of LTOT or not and the list of features.
+
+According to the definitions provided, we defined long-term opioid therapy events as having opioid ‘on hand’ for a total of 162 days or above in a 180-day window. Patients who had any LTOT qualifying 180-day window within their longitudinal record after Day 0 were considered to be LTOT. LTOT events were labelled to be used as a validation set for training the machine learning model. 
+
+## Feature Engineering
+
+## Machine Learning
+## Evaluate Prediction Performance
