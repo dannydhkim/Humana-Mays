@@ -53,6 +53,15 @@ Thoughtful preprocessing of the data enhanced  the ability to interpret the rela
 According to the definitions provided, we defined long-term opioid therapy events as having opioid ‘on hand’ for a total of 162 days or above in a 180-day window. Patients who had any LTOT qualifying 180-day window within their longitudinal record after Day 0 were considered to be LTOT. LTOT events were labelled to be used as a validation set for training the machine learning model. 
 
 ## Feature Engineering
+The following table shows the features extracted and how the extraction was carried out.
+![Screenshot 2020-01-09 at 16 32 04](https://user-images.githubusercontent.com/55929915/72116091-f8c50e80-32fd-11ea-9bcb-2c6473f59ced.png)
 
 ## Machine Learning
+Once patients were labeled as LTOT, we found that the calculated LTOT rate in our database confirmed with the given parameters that were given to us (i.e. greater than 30%) at 36.6%. It is noteworthy that we applied a filter to screen out cancer patients to better represent the general population to arrive at a 33% rate.
+
+A XGBoost framework was used with the following parameters: the data was split into a random 60-40 train and testing set. With 100 rounds of training with a tree model and a binary logistic model to output a probabilistic value.
+
+Figure 2 depicts the importance of the 14 features assessed in descending order of importance. The six major variables that most highly correlated with being at risk for LTOT: average daily MME, total MME, number of non-opioid prescriptions, number of opioid fills, new provider (doctors shopping) and number of benzodiazepine fills. A higher F-score implies a higher discriminative power, but does not indicate any mutual information (i.e. combination of features may lead to different results).  These results directly correlate with the research carried out by previous studies 
+
 ## Evaluate Prediction Performance
+To evaluate the performance of the model, we placed our results on a confusion matrix. The sensitivity and specificity in this instance of the application seen in Fig 3 is 86.76% and 78.94%, respectively. For our purposes, the model was able to achieve an 82% accuracy and a  based on the training data. Furthermore, we evaluated the performance of the model on a ROC-AUC curve and saw an AUC of 0.83 (Figure 4). 
