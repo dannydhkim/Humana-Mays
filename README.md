@@ -65,9 +65,9 @@ A literature research was conducted in order to fully explore the underlying ris
 
 ## Technologies
 This project is created with:
-*Python version: 3.7.5
-*Pandas version: 0.25.3
-*NumPy version: 1.17.4
+* Python version: 3.7.5
+* Pandas version: 0.25.3
+* NumPy version: 1.17.4
 
 ## Setup
 This project is not in PyPI and does not plan to be. Get it by cloning from the GitHub Repo:
