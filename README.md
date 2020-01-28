@@ -12,14 +12,14 @@ This code aims to do just that: to identify members at risk or continued long-te
 This code was developed as part of our application to the Humana Mays Healthcare competition (2019). For more information you can visit: https://www.humanatamuanalytics.com/
 
 ## Table of contents
-* [Data Overview](#Data Overview)
+* [Data Overview](#Data-Overview)
 * [Flow](#Flow)
 * [Technologies](#Technologies)
-* [Data Pre-processing](#Data Pre-processing)
-* [Feature Engineering](#Feature Engineering)
-* [Machine Learning](#Machine Learning)
-* [Evaluation](#Evaluate Prediction Performance)
-* [Notebooks](#Purpose of different notebooks)
+* [Data Pre-processing](#Data-Pre-processing)
+* [Feature Engineering](#Feature-Engineering)
+* [Machine Learning](#Machine-Learning)
+* [Evaluation](#Evaluate-Prediction-Performance)
+* [Notebooks](#Purpose-of-different-notebooks)
 
 ## Data Overview
 The dataset used in this study was obtained from a national health insurance. This dataset contained medical claims from 16,000 members during a period of time of four years (2015 through 2018). The following definitions were provided:
@@ -63,13 +63,13 @@ A literature research was conducted in order to fully explore the underlying ris
 3. Machine Learning
 4. Evaluate Prediction Performance
 
-##Technologies
-This project is created with 
-*Python version 3.7.5
-*Pandas version 0.25.3
-*NumPy version 1.17.4
+## Technologies
+This project is created with:
+*Python version: 3.7.5
+*Pandas version: 0.25.3
+*NumPy version: 1.17.4
 
-##Setup
+## Setup
 This project is not in PyPI and does not plan to be. Get it by cloning from the GitHub Repo:
 ```
 git clone https://github.com/dannydhkim/Humana-Mays.git
