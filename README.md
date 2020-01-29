@@ -20,6 +20,7 @@ This code was developed as part of our application to the Humana Mays Healthcare
 * [Machine Learning](#Machine-Learning)
 * [Evaluation](#Evaluate-Prediction-Performance)
 * [Notebooks](#Purpose-of-different-notebooks)
+* [Literature Sources](#Sources)
 
 ## Data Overview
 The dataset used in this study was obtained from a national health insurance. This dataset contained medical claims from 16,000 members during a period of time of four years (2015 through 2018). The following definitions were provided:
@@ -87,7 +88,7 @@ The following table shows the features extracted and how the extraction was carr
 ## Machine Learning
 Once patients were labeled as LTOT, we found that the calculated LTOT rate in our database confirmed with the given parameters that were given to us (i.e. greater than 30%) at 36.6%. It is noteworthy that we applied a filter to screen out cancer patients to better represent the general population to arrive at a 33% rate.
 
-A XGBoost framework was used with the following parameters: the data was split into a random 60-40 train and testing set. With 100 rounds of training with a tree model and a binary logistic model to output a probabilistic value.
+A XGBoost framework was used with the following parameters: The data was split into a random 60-40 train and testing set. 100 rounds of training were run with a tree method and a binary logistic regression to output a probabilistic value.
 
 ![Feature Importance](https://user-images.githubusercontent.com/54824400/72118017-96234100-3304-11ea-8fc9-6863e8a0de0e.png)
 
@@ -111,3 +112,13 @@ Data Analysis: We explored some data visualizations but found that it was not ve
 
 XGBoost: The machine learning code using XGBoost to implement gradient boost machine on the chosen feature data. The model is evaluated by generating a confusion matrix, accuracy, and AUC curve.
 
+## Sources
+* https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2732338
+* https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2728625
+* https://www.mdedge.com/psychiatry/article/143450/addiction-medicine/opioid-abuse-and-overdose-keep-your-patients-safe
+* https://www.ncbi.nlm.nih.gov/pubmed/26968469
+* https://www.ncbi.nlm.nih.gov/pubmed/25640294
+* https://www.ncbi.nlm.nih.gov/pubmed/27984526
+* https://www.ncbi.nlm.nih.gov/pubmed/29854117
+* https://www.ncbi.nlm.nih.gov/pubmed/30728857
+* https://www.pharmacytimes.com/publications/ajpb/2014/ajpb_septemberoctober2014/understanding-predictors-of-opioid-abuse-predictive-model-development-and-validation
