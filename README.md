@@ -11,6 +11,9 @@ This code aims to do just that: to identify members at risk or continued long-te
 
 This code was developed as part of our application to the Humana Mays Healthcare competition (2019). For more information you can visit: https://www.humanatamuanalytics.com/
 
+<details><summary>READ MORE</summary>
+<p>
+
 ## Table of contents
 * [Data Overview](#Data-Overview)
 * [Flow](#Flow)
@@ -122,3 +125,6 @@ XGBoost: The machine learning code using XGBoost to implement gradient boost mac
 * https://www.ncbi.nlm.nih.gov/pubmed/29854117
 * https://www.ncbi.nlm.nih.gov/pubmed/30728857
 * https://www.pharmacytimes.com/publications/ajpb/2014/ajpb_septemberoctober2014/understanding-predictors-of-opioid-abuse-predictive-model-development-and-validation
+
+</p>
+</details>
